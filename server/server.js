@@ -4,11 +4,12 @@ const mongoose = require('mongoose');
 const cookieParser = require('cookie-parser');
 
 const app = express();
+const db = process.env.MONGODB_URI || `mongodb://localhost:27017/auth`;
 app.use(bodyParser.json());
 app.use(cookieParser());
 
 mongoose.Promise = global.Promise;
-mongoose.connect(`mongodb://localhost:27017/auth`);
+mongoose.connect(db);
 
 const { User } = require('./models/user'); 
 const { auth } = require('./middlewares/auth');
