@@ -19,6 +19,6 @@
     "crypto-js": "^4.0.0",
     "express": "^4.16.2",
     "jsonwebtoken": "^8.0.1",
-    "mongoose": "^4.10.8"
+    "mongoose": "^4.13.21"
   }
 }
